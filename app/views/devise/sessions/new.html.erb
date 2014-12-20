@@ -1,18 +1,16 @@
-<div class="col-lg-4">
+<div class="col-lg-3">
 <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <h2>登陆</h2>
   <div>
-  <!-- 请输入登陆邮箱<br /> -->
-  	<%= f.email_field :email, autofocus: true, label: "#{User.human_attribute_name("email")}" %>
+  	<%= f.email_field :email, autofocus: true %>
   </div>
 
   <div>
-  <!-- 密码<br /> -->
-  	<%= f.password_field :password, autocomplete: "off", label: "#{User.human_attribute_name("password")}" %>
+  	<%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me,label: "#{User.human_attribute_name("remember_me")}" %> </div>
+    <div><%= f.check_box :remember_me %> </div>
   <% end %> 
 
   <div><%= f.submit "登 陆", class: 'btn btn-large btn-primary' %></div>

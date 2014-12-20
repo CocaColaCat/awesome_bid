@@ -1,7 +1,14 @@
 zh-CN:
   activerecord:
+    models:
+      product: '产品'
     attributes:
       user:
         email: '邮箱'
         password: '密码'
         remember_me: '记住我'
+      product:
+        name: '产品名称'
+        product_model: '产品规格'
+        unit: '单位'
+        price: '单价（元）'

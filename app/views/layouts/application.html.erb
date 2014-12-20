@@ -40,15 +40,20 @@
 
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+<!--         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
+        </button> -->
         <a class="navbar-brand" href="#">欢迎</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <%= render 'devise/menu/login_items' %>
+            <% if current_user.try(:mediator?) %>
+              <li>
+                <%= link_to('我的咨询列表', '', data: { confirm: '功能开发中...' }) %>        
+              </li>
+            <% end %>
           </ul>
         </div>
       </div>
@@ -56,7 +61,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-11">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
