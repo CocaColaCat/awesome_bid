@@ -1,0 +1,27 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: awesome_bid_pro
+  username: pro
+  password:
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: awesome_bid_development
+  pool: 5
+  username:
+  password:
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: awesome_bid_test
+  pool: 5
+  username:
+  password:
+
+
+cucumber:
+  <<: *test
