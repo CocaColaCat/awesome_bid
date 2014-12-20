@@ -15,7 +15,8 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= product.product_model %></td>
+
+        <td><%= truncate product.product_model, length: 46 %></td>
         <td><%= product.unit %></td>
         <td><%= product.price %></td>
         <td><%= link_to 'Show', product %></td>
