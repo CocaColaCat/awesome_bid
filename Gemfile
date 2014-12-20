@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 gem 'rails', '4.1.7'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
@@ -25,6 +26,8 @@ gem 'pg'
 gem 'seed-fu'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem "cancancan"
+gem "twitter-bootstrap-rails"
+gem 'bootstrap_form'
 
 group :development do
   # gem 'spring'
